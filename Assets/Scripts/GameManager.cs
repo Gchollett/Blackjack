@@ -32,6 +32,7 @@ public class GameManager : MonoBehaviour
     private bool roundOver = false;
     private bool stop = false;
     private bool busted = false;
+    private bool firstBet = true;
     private Animator chipAnimator;
     private Animator moneyAnimator;
     void Awake()
@@ -49,9 +50,14 @@ public class GameManager : MonoBehaviour
     }
     void FixedUpdate()
     {
+
         HandleText();
         HandlePlayerActive();
         HandleBetting();
+        if(firstBet && !betting){
+            dm.StartDialogue(new string[] {"Now click on the deck to deal the cards", "After that you can click the deck to hit","Once you think you have bested...","ME","or just want to give up","Click my upside down card to stay"});
+            firstBet = false;
+        }
         HandleDealerTurn();
         HandleLosing();
         HandleWinning();

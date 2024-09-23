@@ -4379,7 +4379,7 @@ MonoBehaviour:
   - {fileID: 21300000, guid: 771273b19403e754aa3e2bcd63031c1b, type: 3}
   - {fileID: 21300000, guid: a2ae9869531e71b48a0b8b1796f29d39, type: 3}
   - {fileID: 21300000, guid: 580eb7e5add5df04391ed1ca24e27da3, type: 3}
-  mm: {fileID: 1360041339}
+  mainManagerBackup: {fileID: 1360041339}
 --- !u!1 &1951789339
 GameObject:
   m_ObjectHideFlags: 0

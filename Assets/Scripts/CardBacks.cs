@@ -4,9 +4,16 @@ public class CardBacks : MonoBehaviour
 {
 
     public Sprite[] backs;
-    public MainManager mm;
+    private MainManager mm = MainManager.Instance;
+    public MainManager mainManagerBackup;
     private int backIndex = 0;
 
+    void Start()
+    {
+        if(mm == null){
+            mm = mainManagerBackup;
+        }
+    }
     void FixedUpdate() {
         gameObject.GetComponent<SpriteRenderer>().sprite = backs[backIndex];
     }
